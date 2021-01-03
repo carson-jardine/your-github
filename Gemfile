@@ -40,15 +40,24 @@ gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
   gem 'pry'
-  gem 'rspec-rails'
-  gem 'capybara'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'rubocop'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'launchy'
+  gem 'nyan-cat-formatter'
+  gem 'rspec-rails', '~> 4.0.1'
+  gem 'shoulda-matchers', '~> 4.0'
+  gem 'simplecov'
 end
 
 

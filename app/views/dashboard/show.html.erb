@@ -1,0 +1,18 @@
+<h1>Hello, <%= current_user.username %></h1>
+
+<h3>Public Repositories:</h3>
+<section class='public-repos'>
+  <ul>
+    <% @public_repos.each do |repo| %>
+    <li> <%= link_to repo.name, repo.url %></li>
+    <% end %>
+  </ul>
+</section>
+<h3>Private Repositories:</h3>
+<section class='private-repos'>
+  <ul>
+    <% @private_repos.each do |repo| %>
+    <li> <%= link_to repo.name, repo.url %></li>
+    <% end %>
+  </ul>
+</section>

@@ -1,0 +1,10 @@
+<% if current_user %>
+  <h1>Hello, <%= current_user.username %></h1>
+  <%= link_to 'View All Repos', repos_path %>
+
+  <%= link_to 'Logout', logout_path, method: :delete %>
+<% else %>
+  <h1>Welcome!</h1>
+  <p>Please sign in to view your GitHub Repos</p>
+  <%= link_to 'Log in with GitHub', github_login_path %>
+<% end %>
