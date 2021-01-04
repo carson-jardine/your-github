@@ -1,10 +1,15 @@
 <% if current_user %>
+<center>
   <h1>Hello, <%= current_user.username %></h1>
   <%= link_to 'View All Repos', repos_path %>
 
   <%= link_to 'Logout', logout_path, method: :delete %>
+</center>
 <% else %>
-  <h1>Welcome!</h1>
-  <p>Please sign in to view your GitHub Repos</p>
+<center>
+  <h1>Welcome to Your GitHub!</h1>
+  <img src="https://static.thenounproject.com/png/40881-200.png" width="10%", alt="Your GitHub Logo weird little stick figure"></img>
+  <p>Please sign in to view your GitHub Repositories</p>
   <%= link_to 'Log in with GitHub', github_login_path %>
+</center>
 <% end %>
